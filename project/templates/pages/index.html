@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 class="main-title">ALA ELHADY</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <label>Total Money:</label>
+    <input type="number" name="money" required><br><br>
+
+    <label>Start Date:</label>
+    <input type="date" name="start"><br><br>
+
+    <label>End Date:</label>
+    <input type="date" name="end"><br><br>
+
+    <button type="submit">Calculate</button>
+</form>
+
+{% endblock %}

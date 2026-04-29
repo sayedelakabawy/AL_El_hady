@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<h1 class="title">Your Dashboard</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Total Money</h3>
+        <p>{{ money }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Days</h3>
+        <p>{{ days }}</p>
+    </div>
+
+    <div class="card">
+        <h3>Daily Spend</h3>
+        <p>{{ daily }}</p>
+    </div>
+
+</div>
+
+<div class="status-box" style="background-color: {{ color }};">
+    <h2>{{ status }}</h2>
+</div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Expenses{% endblock %}
+
+{% block content %}
+
+<h1 class="title">Add Expense</h1>
+
+<form method="POST">
+    {% csrf_token %}
+
+    <input type="number" name="amount" placeholder="Enter amount">
+
+    <button type="submit">Add Expense</button>
+</form>
+
+<div class="expense-list">
+    <h3>Expenses</h3>
+
+    <ul>
+        {% for exp in expenses %}
+            <li>{{ exp }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
